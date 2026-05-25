@@ -1,0 +1,12 @@
+[build]
+  publish = "." # or your build folder like "dist", "build", "public"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*.pdf"
+  [headers.values]
+    Content-Disposition = "attachment"
